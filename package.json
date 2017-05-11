@@ -1,0 +1,26 @@
+{
+  "name": "onebytecode-main-web",
+  "version": "0.0.1",
+  "description": "This is main website of OneByteCode studio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "OneByteCode studio",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "config": "^1.26.1",
+    "express": "^4.15.2",
+    "mocha": "^3.3.0",
+    "mongoose": "^4.9.8",
+    "morgan": "^1.8.1",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
