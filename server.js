@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
 app.get('/favicon.ico?v=3', function (req, res) {
   res.sendFile(__dirname + '/favicon.ico')
 })
-app.get('/*', (req, res) => {
+app.get('/*', function(req, res) {
   console.log('Starting ' + req.url)
   res.sendFile(__dirname + req.url)
 })
