@@ -14,6 +14,9 @@ app.use(bodyParser.json({ type: 'application/json'}));
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/views/index.html')
 })
+app.get('/favicon.ico?v=3', function (req, res) {
+  res.sendFile(__dirname + '/favicon.ico')
+})
 app.get('/*', (req, res) => {
   console.log('Starting ' + req.url)
   res.sendFile(__dirname + req.url)

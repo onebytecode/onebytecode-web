@@ -1,19 +1,17 @@
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400";
-
-/*
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-/* Reset */
+@font-face {
+  font-family: 'Intro-Cond';
+  font-style: normal;
+  font-weight: 100;
+  src: url('/assets/fonts/intro_cond.otf');
+}
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
 		border: 0;
 		font-size: 100%;
-		font: inherit;
+		font-family: Intro-Cond;
 		vertical-align: baseline;
 	}
 
@@ -1705,14 +1703,6 @@
 	}
 
 		p.content {
-			-moz-columns: 20em 2;
-			-webkit-columns: 20em 2;
-			-ms-columns: 20em 2;
-			columns: 20em 2;
-			-moz-column-gap: 2em;
-			-webkit-column-gap: 2em;
-			-ms-column-gap: 2em;
-			column-gap: 2em;
 			text-align: justify;
 		}
 
@@ -1720,6 +1710,7 @@
 		font-weight: 300;
 		line-height: 1.5;
 		margin: 0 0 0.7em 0;
+		font-family: 'Intro-Cond';
 		letter-spacing: -0.025em;
 	}
 
@@ -2306,12 +2297,14 @@
 		}
 
 		.icon.major {
-			border: solid 1px;
 			display: inline-block;
-			border-radius: 100%;
 			padding: 0.65em;
 			margin: 0 0 2em 0;
 			cursor: default;
+		}
+		.icon.major img {
+			height: 6em;
+			width: 6em;
 		}
 
 			.icon.major:before {
@@ -2670,6 +2663,7 @@
 		}
 
 			header.major h2:after {
+				width: 25%;
 				display: block;
 				content: '';
 				width: 3.25em;
@@ -2695,6 +2689,7 @@
 			header.major.special h2:after {
 				margin-left: auto;
 				margin-right: auto;
+				width: 25%;
 			}
 
 	footer.major {
@@ -2728,6 +2723,7 @@
 
 	header.major h2:after {
 		background-color: rgba(255, 255, 255, 0.35);
+		width: 25%;
 	}
 
 /* Table */
@@ -2907,6 +2903,9 @@
 			color: #ffffff;
 			text-align: center;
 		}
+		.statistics li img {
+			height: 50%;
+		}
 
 			.statistics li.style1 {
 				background-color: #efa8b0;
@@ -3016,6 +3015,8 @@
 
 			.spotlight .content > :last-child {
 				margin-bottom: 0;
+				width: 50%;
+				font-size: 1.25em;
 			}
 
 			.spotlight .content header.major {
@@ -3026,14 +3027,12 @@
 			display: inline-block;
 			margin-left: 4em;
 			padding: 0.65em;
-			border-radius: 100%;
-			border: solid 1px;
 		}
 
 			.spotlight .image img {
 				display: block;
-				border-radius: 100%;
-				width: 16em;
+				height: 12em;
+				width: 12em;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -3305,6 +3304,8 @@
 					line-height: 2.25em;
 					padding: 0 1.25em;
 					border: 0;
+					font-family: Helvetica;
+					color: #9b9b9b;
 					border-radius: 8px;
 					box-shadow: inset 0 0 0 1px transparent;
 				}
@@ -3370,6 +3371,8 @@
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
 			color: #636363;
+			font-family: Intro-Cond;
+			font-weight: bold;
 		}
 
 		#main blockquote {
@@ -3557,6 +3560,7 @@
 		}
 
 		#main header.major h2:after {
+			height: 0.05em;
 			background-color: #dddddd;
 			background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 			background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
