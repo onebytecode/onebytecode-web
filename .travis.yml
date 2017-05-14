@@ -3,5 +3,5 @@ node_js:
   - 0.12
 script:
   - npm test
-# after_success:
-#   - npm run-script docker_hook
+after_success:
+  - npm run-script docker_hook
