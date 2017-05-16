@@ -7,7 +7,7 @@ request({
   multipart: [
       {
         'content-type': 'application/json',
-        body: JSON.stringify({ source_type: 'Branch', source_name: 'jam' })
+        body: JSON.stringify({ "source_type" : "Branch", "source_name" : "develop" })
       }
     ],
 })
