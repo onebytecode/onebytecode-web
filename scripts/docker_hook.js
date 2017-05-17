@@ -7,7 +7,7 @@ request({
   multipart: [
       {
         'content-type': 'application/json',
-        body: JSON.stringify({ })
+        body: JSON.stringify({})
       }
     ],
 })
