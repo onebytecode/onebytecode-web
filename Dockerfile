@@ -1,12 +1,12 @@
 FROM mhart/alpine-node:base-6
+# FROM mhart/alpine-node:6
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /src
+ADD . .
 
-COPY package.json /usr/src/app/
-RUN npm install
-
-COPY . /usr/src/app
+# WORKDIR /src
+ADD package.json src/package.json
+# RUN npm install
 
 EXPOSE 8080
-CMD [ "npm", "start" ]
+CMD ["node", "server.js"]
