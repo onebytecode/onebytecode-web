@@ -23,7 +23,8 @@
   },
   "scripts": {
     "test": "mocha --timeout 10000",
-    "start": "node server.js"
+    "start": "node server.js",
+    "docker_hook" : "node scripts/docker_hook.js"
   },
   "repository": {
     "type": "git",
