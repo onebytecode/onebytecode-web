@@ -23,22 +23,5 @@ describe('/GET', function () {
         done()
       })
   })
-  it('it should get jquery js', function (done) {
-    chai.request(server)
-      .get('/bower_components/jquery/dist/jquery.min.js')
-      .end(function (err, res) {
-          res.should.have.status(200)
-          res.body.should.be.a('object');
-        done()
-      })
-  })
-  it('it should get jquery-ui js', function (done) {
-    chai.request(server)
-      .get('/bower_components/jquery-ui/jquery-ui.min.js')
-      .end(function (err, res) {
-          res.should.have.status(200)
-          res.body.should.be.a('object');
-        done()
-      })
-  })
+
 })
