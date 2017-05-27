@@ -5,7 +5,7 @@ $window.on('load', function() {
 
   var nav = $("#nav"),
         top = "top",
-        hdr = parseFloat($('#header').height()),
+        hdr = parseFloat($('#header').outerHeight()),
         wrapper = $('#wrapper'),
         wrapper_padding = parseFloat(wrapper.css("padding-top")),
         mnheight = parseFloat($('#mainNavContainer').height()),
