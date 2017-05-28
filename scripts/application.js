@@ -1,5 +1,3 @@
-import 'jquery'
-
 var $window  =  $(window)
 $window.on('load', function() {
 
