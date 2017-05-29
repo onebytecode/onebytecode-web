@@ -12,20 +12,12 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/json'}));
 
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/views/index.html')
+  res.sendFile(__dirname + '/public/assets/index.html')
 })
-app.get('/favicon.ico?v=3', function (req, res) {
-  res.sendFile(__dirname + '/favicon.ico')
+app.get('/main.js', (req, res) => {
+  res.sendFile(__dirname + '/public/assets' + req._parsedUrl.pathname)
 })
 app.get('/*', function(req, res) {
-  console.log('Starting ' + req.url)
-  res.sendFile(__dirname + req.url)
-})
-app.get('/bower_components/*', function (req, res) {
-  console.log('Starting ' + req.url)
-  res.sendFile(__dirname + req.url)
-})
-app.get('/scripts/*', function (req, res) {
   console.log('Starting ' + req.url)
   res.sendFile(__dirname + req.url)
 })
