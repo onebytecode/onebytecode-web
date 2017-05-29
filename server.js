@@ -14,7 +14,7 @@ app.use(bodyParser.json({ type: 'application/json'}));
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/public/assets/index.html')
 })
-app.get('/main.js', (req, res) => {
+app.get('/main.js', function(req, res) {
   res.sendFile(__dirname + '/public/assets' + req._parsedUrl.pathname)
 })
 app.get('/*', function(req, res) {
