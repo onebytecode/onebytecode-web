@@ -24,7 +24,7 @@ const LiveReloadPlugin = require('webpack-livereload-plugin')
 module.exports  =  {
   entry: './scripts/vendor.js',
   output: {
-    path: __dirname + '/public/assets',
+    path: __dirname + '/public/',
     filename: 'main.js'
   },
   module: {
@@ -58,14 +58,12 @@ module.exports  =  {
       $:      "jquery/dist/jquery.min.js",
       jQuery: "jquery/dist/jquery.min.js"
     }),
-    UglifyJsPluginConfig,
     HtmlWebpackPluginConfig,
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')
       }
-    }),
-    new LiveReloadPlugin()
+    })
   ],
   devServer: {
     compress: true,
