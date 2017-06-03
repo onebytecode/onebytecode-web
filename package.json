@@ -24,6 +24,7 @@
   "scripts": {
     "test": "mocha --timeout 10000",
     "start": "node server.js",
+    "webrack": "webpack --progress --colors --watch",
     "docker_hook" : "node scripts/docker_hook.js"
   },
   "repository": {
