@@ -1,25 +1,52 @@
 {
   "name": "onebytecode-main-web",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "This is main website of OneByteCode studio",
   "main": "server.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "body-parser": "^1.17.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
     "config": "^1.26.1",
-    "express": "^4.15.2",
-    "request": "^2.81.0"
+    "css-loader": "^0.28.3",
+    "exports-loader": "^0.6.4",
+    "express": "^4.15.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "helmet": "^3.6.0",
+    "html-webpack-plugin": "^2.28.0",
+    "image-webpack-loader": "^3.3.1",
+    "imports-loader": "^0.7.1",
+    "jquery": "^3.2.1",
+    "jquery-prioritize": "^1.1.7",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
+    "node-sass": "^4.5.3",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "request": "^2.81.0",
+    "resolve-url-loader": "^2.0.2",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.6.1",
+    "webpack-livereload-plugin": "^0.11.0"
   },
   "devDependencies": {
     "mocha": "^3.3.0",
     "nodemon": "^1.11.0",
     "mongoose": "^4.9.8",
     "morgan": "^1.8.1",
-    "request": "^2.81.0",
     "chai": "^3.5.0",
-    "chai-http": "^3.0.0"
+    "chai-http": "^3.0.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
+    "uglifyjs-webpack-plugin": "^0.4.3"
   },
   "scripts": {
     "test": "mocha --timeout 10000",

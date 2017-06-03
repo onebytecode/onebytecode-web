@@ -1,0 +1,21 @@
+import React from 'react'
+
+export default class Intro extends React.Component {
+  render() {
+    return (
+      <section id="intro" className="main">
+        <div className="spotlight">
+          <div className="content">
+            <header className="major">
+              <h2>Кто мы?</h2>
+            </header>
+            <p>Разработчик и разработчик.
+               Один любит делать сайты, другой приложения на смартфоны.
+               Вместе мы сила!</p>
+          </div>
+          <span className="image"><img src="images/img01.svg" alt="" /></span>
+        </div>
+      </section>
+    )
+  }
+}
