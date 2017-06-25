@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default class Intro extends React.Component {
-  render() {
+const Intro = () => {
     return (
       <section id="intro" className="main">
         <div className="spotlight">
@@ -17,5 +16,6 @@ export default class Intro extends React.Component {
         </div>
       </section>
     )
-  }
 }
+
+export default Intro

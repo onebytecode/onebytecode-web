@@ -4,15 +4,15 @@ import First from './sections/first.jsx'
 import Second from './sections/second.jsx'
 import GetStarted from './sections/getStarted.jsx'
 
-export default class Sections extends React.Component {
-  render() {
-    return (
-      <div id="main">
-        <Intro />
-        <First />
-        <Second />
-        <GetStarted />
-      </div>
-    )
-  }
+const Sections = () => {
+  return(
+    <div id='main'>
+      <Intro />
+      <First />
+      <Second />
+      <GetStarted />
+    </div>
+ )
 }
+
+export default Sections
