@@ -17,6 +17,14 @@ const UglifyJsPluginConfig = new UglifyJsPlugin({
   }
 })
 
+const CompressionPlugin = require("compression-webpack-plugin");
+const CompressionPluginConfig = new CompressionPlugin({
+        asset: "[path].gz[query]",
+        algorithm: "gzip",
+        test: /\.js$|\.html$/,
+        threshold: 10240,
+        minRatio: 0.8
+    })
 // const LiveReloadPlugin = require('webpack-livereload-plugin')
 
 
@@ -61,8 +69,10 @@ module.exports  =  {
     new webpack.EnvironmentPlugin("NODE_ENV"),
     new webpack.optimize.CommonsChunkPlugin({
         children: true,
-        async: true,
-    })
+        async: true
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    CompressionPluginConfig
   ],
   devServer: {
     compress: true,
