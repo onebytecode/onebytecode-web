@@ -14,6 +14,7 @@ const UglifyJsPluginConfig = new UglifyJsPlugin({
   sourceMap: true,
   compress: {
     warnings: true
+    
   }
 })
 
