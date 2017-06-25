@@ -1,7 +1,7 @@
-
-var app = require('express')()
-var port  = 8080
-var bodyParser = require('body-parser')
+'use strict'
+let app = require('express')()
+let port  = 8080
+let bodyParser = require('body-parser')
 let ENV = process.env.NODE_ENV || 'production'
 
 
