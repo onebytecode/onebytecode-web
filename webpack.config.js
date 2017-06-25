@@ -11,20 +11,20 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const UglifyJsPluginConfig = new UglifyJsPlugin({
-  sourceMap: true,
+  sourceMap: false,
   compress: {
-    warnings: true
+    warnings: false
   }
 })
 
-const LiveReloadPlugin = require('webpack-livereload-plugin')
+// const LiveReloadPlugin = require('webpack-livereload-plugin')
 
 
 
 module.exports  =  {
   entry: './scripts/vendor.js',
   output: {
-    path: __dirname + '/public/',
+    path: __dirname + '/public/assets',
     filename: 'main.js'
   },
   module: {
@@ -42,9 +42,8 @@ module.exports  =  {
       },
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /node_modules/,
         loader: 'babel-loader'
-
       },
       {
         test: /.jsx?$/,
@@ -58,11 +57,11 @@ module.exports  =  {
       $:      "jquery/dist/jquery.min.js",
       jQuery: "jquery/dist/jquery.min.js"
     }),
-    HtmlWebpackPluginConfig,
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
+    UglifyJsPluginConfig,
+    new webpack.EnvironmentPlugin("NODE_ENV"),
+    new webpack.optimize.CommonsChunkPlugin({
+        children: true,
+        async: true,
     })
   ],
   devServer: {
