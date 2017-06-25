@@ -11,14 +11,13 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const UglifyJsPluginConfig = new UglifyJsPlugin({
-  sourceMap: true,
+  sourceMap: false,
   compress: {
-    warnings: true
-    
+    warnings: false
   }
 })
 
-const LiveReloadPlugin = require('webpack-livereload-plugin')
+// const LiveReloadPlugin = require('webpack-livereload-plugin')
 
 
 
@@ -43,9 +42,8 @@ module.exports  =  {
       },
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /node_modules/,
         loader: 'babel-loader'
-
       },
       {
         test: /.jsx?$/,
@@ -60,13 +58,11 @@ module.exports  =  {
       jQuery: "jquery/dist/jquery.min.js"
     }),
     UglifyJsPluginConfig,
-    HtmlWebpackPluginConfig,
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    }),
-    new LiveReloadPlugin()
+    new webpack.EnvironmentPlugin("NODE_ENV"),
+    new webpack.optimize.CommonsChunkPlugin({
+        children: true,
+        async: true,
+    })
   ],
   devServer: {
     compress: true,

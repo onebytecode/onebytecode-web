@@ -1,13 +1,10 @@
-var $window  =  $(window)
+const $window  =  $(window)
 $window.on('load', function() {
 
-  var nav = $("#nav"),
-        top = "top",
-        hdr = parseFloat($('#header').outerHeight()),
-        wrapper = $('#wrapper'),
-        wrapper_padding = parseFloat(wrapper.css("padding-top")),
-        mnheight = parseFloat($('#mainNavContainer').height()),
-        newHeight = wrapper_padding + mnheight + 'px'
+  const nav = $("#nav")
+  const top = "top"
+  const hdr = parseFloat($('#header').outerHeight())
+
 
   $window.scroll(function() {
     if( $(this).scrollTop() > hdr ) {

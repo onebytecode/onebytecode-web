@@ -51,6 +51,9 @@
   "scripts": {
     "test": "mocha --timeout 10000",
     "start": "node server.js",
+    "dev": "NODE_ENV=dev nodemon",
+    "webrack": "NODE_ENV=production webpack -p",
+    "webrack_dev": "NODE_ENV=dev webpack -d --watch",
     "docker_hook": "node scripts/docker_hook.js"
   },
   "repository": {

@@ -1,7 +1,5 @@
 import React from 'react'
-
-export default class First extends React.Component {
-  render() {
+const First = () => {
     return (
       <section id="first" className="main special">
         <header className="major">
@@ -26,5 +24,6 @@ export default class First extends React.Component {
         </ul>
       </section>
     )
-  }
 }
+
+export default First

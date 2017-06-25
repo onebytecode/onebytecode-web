@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default class Wrapper extends React.Component {
-  render() {
+const Wrapper = (props) => {
     return (
       <div id="wrapper" >
-        { this.props.childs }
+        { props.childs }
       </div>
     )
-  }
 }
+
+export default Wrapper
