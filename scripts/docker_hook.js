@@ -7,7 +7,7 @@ request({
     uri: _uri,
     json: {
       "source_type":"Branch",
-      "source_name":"develop"
+      "source_name":"master"
     }
 
   },
