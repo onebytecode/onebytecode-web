@@ -1,5 +1,5 @@
 module.exports = () => {
-  const { YardBird }  =  require('../models')().yardbirds
+  const  YardBird   =  require('../models')().yardbirds
   const controllers = {
     yardbirds: require('./yardbirds')(YardBird)
   }

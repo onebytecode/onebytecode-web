@@ -1,3 +1,3 @@
-module.exports = (yardbird, params) => {
-  require('./yardbirds_controller')(yardbird, params)
+module.exports = (yardbird) => {
+  return require('./yardbirds_controller')(yardbird)
 }

@@ -1,3 +1,3 @@
 module.exports = (mongoose, autoIncrement) => {
-  require('./yardbirds')(mongoose, autoIncrement  )
+  return require('./yardbirds')(mongoose, autoIncrement)
 }
