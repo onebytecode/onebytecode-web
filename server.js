@@ -6,6 +6,9 @@ const ENV = process.env.NODE_ENV || 'production'
 const compression = require('compression')
 const morgan  =  require('morgan')
 
+// DB CONNECTION
+require('./db')().connect
+
 app.use(bodyParser.json());
 app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({extended: true}));
